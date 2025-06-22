@@ -86,77 +86,186 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        {/* Gold Standard Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full font-semibold text-sm mb-6 shadow-lg">
+            ⭐ GOLD STANDARD ⭐
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Next.js + Supabase + Vercel
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Your modern web app stack is ready! 🚀
+          <p className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-semibold mb-4">
+            Gold Standard in Modern Web App Development
+          </p>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            The ultimate stack combining React's most powerful framework, PostgreSQL-powered backend, 
+            and the world's fastest deployment platform. Built for scale, optimized for performance. 🚀
           </p>
         </div>
 
-        <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
+        {/* Authentication Card */}
+        <div className="max-w-md mx-auto bg-white rounded-xl shadow-xl p-8 mb-16 border border-gray-100">
           {user ? (
             <div className="text-center">
               <div className="mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">✅</span>
+                </div>
                 <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                  Welcome back!
+                  Authentication Success!
                 </h2>
                 <p className="text-gray-600">
-                  Email: {user.email}
+                  Welcome, {user.email}
                 </p>
               </div>
               <button
                 onClick={signOut}
-                className="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+                className="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 shadow-md"
               >
                 Sign Out
               </button>
             </div>
           ) : (
             <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl">🔐</span>
+              </div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-                Get Started
+                Experience the Power
               </h2>
               <button
                 onClick={signIn}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-4"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 mb-4 shadow-md"
               >
                 Sign in with GitHub
               </button>
               <p className="text-sm text-gray-500">
-                Sign in to test Supabase authentication
+                Test Supabase authentication in action
               </p>
             </div>
           )}
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              ⚡ Next.js 15
+        {/* Why Gold Standard Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Why This Stack is the Gold Standard
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                Lightning Fast
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Next.js 15 with Turbopack delivers instant hot reloads and optimized builds
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                Enterprise Security
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Supabase provides row-level security, OAuth, and PostgreSQL reliability
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+              <div className="text-3xl mb-4">🌍</div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                Global Edge Network
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Vercel's edge functions and CDN ensure sub-100ms response times worldwide
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-500">
+              <div className="text-3xl mb-4">📈</div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                Infinite Scale
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Auto-scaling infrastructure that grows from MVP to millions of users
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Tech Stack Details */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="text-4xl mb-4">⚛️</div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Next.js 15
             </h3>
-            <p className="text-gray-600 text-sm">
-              Latest React framework with App Router, Turbopack, and more
-            </p>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>✓ App Router with nested layouts</li>
+              <li>✓ Server & Client Components</li>
+              <li>✓ Turbopack for 700x faster builds</li>
+              <li>✓ Built-in TypeScript support</li>
+              <li>✓ Image & Font optimization</li>
+            </ul>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              🗄️ Supabase
+          <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="text-4xl mb-4">🗄️</div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Supabase
             </h3>
-            <p className="text-gray-600 text-sm">
-              PostgreSQL database, authentication, and real-time subscriptions
-            </p>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>✓ PostgreSQL database</li>
+              <li>✓ Real-time subscriptions</li>
+              <li>✓ Built-in authentication</li>
+              <li>✓ Row Level Security (RLS)</li>
+              <li>✓ Auto-generated APIs</li>
+            </ul>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              🚀 Vercel
+          <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Vercel
             </h3>
-            <p className="text-gray-600 text-sm">
-              Edge network, instant deployments, and optimized for Next.js
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>✓ Zero-config deployments</li>
+              <li>✓ Edge Functions globally</li>
+              <li>✓ Automatic HTTPS & CDN</li>
+              <li>✓ Git-based workflows</li>
+              <li>✓ Preview deployments</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Build the Future?
+            </h2>
+            <p className="text-xl mb-6 opacity-90">
+              Join thousands of developers using the gold standard stack for modern web applications
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://github.com/zazakia/nextjs-supabase-vercel-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              >
+                View Source Code
+              </a>
+              <a
+                href="https://vercel.com/new/clone?repository-url=https://github.com/zazakia/nextjs-supabase-vercel-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200"
+              >
+                Deploy Your Own
+              </a>
+            </div>
           </div>
         </div>
       </div>
