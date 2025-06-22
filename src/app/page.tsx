@@ -120,7 +120,7 @@ export default function Home() {
               </h2>
               <button
                 onClick={signIn}
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-4"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-4"
               >
                 Sign in with GitHub
               </button>
