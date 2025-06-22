@@ -98,8 +98,8 @@ export default function Home() {
             Gold Standard in Modern Web App Development
           </p>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            The ultimate stack combining React's most powerful framework, PostgreSQL-powered backend, 
-            and the world's fastest deployment platform. Built for scale, optimized for performance. 🚀
+            The ultimate stack combining React&apos;s most powerful framework, PostgreSQL-powered backend, 
+            and the world&apos;s fastest deployment platform. Built for scale, optimized for performance. 🚀
           </p>
         </div>
 
@@ -178,7 +178,7 @@ export default function Home() {
                 Global Edge Network
               </h3>
               <p className="text-gray-600 text-sm">
-                Vercel's edge functions and CDN ensure sub-100ms response times worldwide
+                Vercel&apos;s edge functions and CDN ensure sub-100ms response times worldwide
               </p>
             </div>
             
